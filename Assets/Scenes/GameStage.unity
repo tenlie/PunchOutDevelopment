@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 991249}
   - 212: {fileID: 991248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1594031}
   - 212: {fileID: 1594030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 34454135}
   - 212: {fileID: 34454134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 40555794}
   - 212: {fileID: 40555793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 106063535}
   - 212: {fileID: 106063534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 115980366}
   - 212: {fileID: 115980365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1445,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 248713910}
   - 212: {fileID: 248713909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,7 +1504,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 325799207}
   - 212: {fileID: 325799206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1563,7 +1563,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 331958208}
   - 212: {fileID: 331958207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1747,7 +1747,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 367667637}
   - 212: {fileID: 367667636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1908,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 396897327}
   - 212: {fileID: 396897326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,7 +2013,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 454333335}
   - 212: {fileID: 454333334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2208,7 +2208,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 476009728}
   - 212: {fileID: 476009727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 538604105}
   - 212: {fileID: 538604104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture12 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2570,7 +2570,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 559746145}
   - 212: {fileID: 559746144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2629,7 +2629,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 573207862}
   - 212: {fileID: 573207861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2828,7 +2828,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 654575738}
   - 212: {fileID: 654575737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3048,7 +3048,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 689510940}
   - 212: {fileID: 689510939}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3166,7 +3166,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 713646814}
   - 212: {fileID: 713646813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3225,7 +3225,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 724898564}
   - 212: {fileID: 724898563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3343,7 +3343,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 759064622}
   - 212: {fileID: 759064621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3694,7 +3694,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 831199155}
   - 212: {fileID: 831199154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3753,7 +3753,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 844183364}
   - 212: {fileID: 844183363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3871,7 +3871,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 848501554}
   - 212: {fileID: 848501553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3930,7 +3930,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 866578219}
   - 212: {fileID: 866578218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture15 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4017,7 +4017,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 891515153}
   - 212: {fileID: 891515152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4276,7 +4276,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 919622615}
   - 212: {fileID: 919622614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4335,7 +4335,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 925280194}
   - 212: {fileID: 925280193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4394,7 +4394,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 925939888}
   - 212: {fileID: 925939887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4481,7 +4481,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 967414050}
   - 212: {fileID: 967414049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture12 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4614,7 +4614,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1002033187}
   - 212: {fileID: 1002033186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture15 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4806,7 +4806,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1037418806}
   - 212: {fileID: 1037418805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4865,7 +4865,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1044099867}
   - 212: {fileID: 1044099866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5287,7 +5287,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1138915359}
   - 212: {fileID: 1138915358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5389,7 +5389,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1158717032}
   - 212: {fileID: 1158717031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5879,7 +5879,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1295255012}
   - 212: {fileID: 1295255011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture16 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6034,7 +6034,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1318806323}
   - 212: {fileID: 1318806322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: noun_157404_cc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6093,7 +6093,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1320461340}
   - 212: {fileID: 1320461339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6152,7 +6152,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1324545034}
   - 212: {fileID: 1324545033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6211,7 +6211,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1335329245}
   - 212: {fileID: 1335329244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6445,7 +6445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1360487999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.13, y: -5.78, z: 0}
+  m_LocalPosition: {x: -3.295, y: -5.911, z: 0}
   m_LocalScale: {x: 0.20115615, y: 0.20115611, z: 0.20115611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -6479,9 +6479,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
-  m_Size: {x: 3, y: 4.75}
+  m_Size: {x: 1.5, y: 3.5}
 --- !u!114 &1360488004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6691,7 +6691,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1438169542}
   - 212: {fileID: 1438169541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6750,7 +6750,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1449553571}
   - 212: {fileID: 1449553570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6930,7 +6930,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1479128661}
   - 212: {fileID: 1479128660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7185,7 +7185,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1483310801}
   - 212: {fileID: 1483310800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7244,7 +7244,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1497800150}
   - 212: {fileID: 1497800149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7362,7 +7362,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1541155098}
   - 212: {fileID: 1541155097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7480,7 +7480,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1604379616}
   - 212: {fileID: 1604379615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7539,7 +7539,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1604469888}
   - 212: {fileID: 1604469887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7657,7 +7657,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1624368964}
   - 212: {fileID: 1624368963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7716,7 +7716,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1671697314}
   - 212: {fileID: 1671697313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7975,7 +7975,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1704722089}
   - 212: {fileID: 1704722088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: noun_157404_cc (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8237,7 +8237,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1794782755}
   - 212: {fileID: 1794782754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8296,7 +8296,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1803205626}
   - 212: {fileID: 1803205625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8682,7 +8682,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1922584154}
   - 212: {fileID: 1922584153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8818,7 +8818,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1930647974}
   - 212: {fileID: 1930647973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture12 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9023,7 +9023,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1945017108}
   - 212: {fileID: 1945017107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9203,7 +9203,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1962294231}
   - 212: {fileID: 1962294230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture6 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9262,7 +9262,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1972936347}
   - 212: {fileID: 1972936346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9682,7 +9682,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2042021890}
   - 212: {fileID: 2042021889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9870,7 +9870,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2089607694}
   - 212: {fileID: 2089607693}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10011,7 +10011,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2105672607}
   - 212: {fileID: 2105672606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10133,7 +10133,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2121125711}
   - 212: {fileID: 2121125710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10285,7 +10285,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2128304085}
   - 212: {fileID: 2128304084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10403,7 +10403,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2140827931}
   - 212: {fileID: 2140827930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OfficeFurniture1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

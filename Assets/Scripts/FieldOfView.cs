@@ -74,7 +74,7 @@ public class FieldOfView : MonoBehaviour {
         
       
 
-        if (deathNumber>=1.5){
+        if (deathNumber>=1.0){
           
             GameOverUI_BG.SetActive(true);
             Time.timeScale = 0;
