@@ -8,7 +8,7 @@ public class Tester : MonoBehaviour
     void Start()
     {
         iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_1"),
-                                              "time", 35,
+                                              "time", 20,
                                               "easetype", iTween.EaseType.linear, 
                                               "oncomplete", "moveNext", 
                                               "oncompletetarget", this.gameObject));
