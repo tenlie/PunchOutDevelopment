@@ -14116,7 +14116,7 @@ MonoBehaviour:
   ClearUI_BG: {fileID: 1107588262}
   GameOverUI_BG: {fileID: 204560321}
   joystick: {fileID: 149692438}
-  timer: {fileID: 0}
+  timer: {fileID: 1715273733}
 --- !u!1 &1369973575
 GameObject:
   m_ObjectHideFlags: 0
