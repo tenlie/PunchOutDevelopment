@@ -5035,7 +5035,8 @@ MonoBehaviour:
   ClearUI_BG: {fileID: 1107588262}
   Joystick: {fileID: 1045680265}
   ReadyStartText: {fileID: 991628873}
-  Timer: {fileID: 0}
+  startTime: 0
+  TimerUI: {fileID: 884538346}
 --- !u!1 &1071198700
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,6 +6568,7 @@ MonoBehaviour:
   ClearUI_BG: {fileID: 1107588262}
   GameOverUI_BG: {fileID: 204560321}
   joystick: {fileID: 149692438}
+  timer: {fileID: 0}
 --- !u!1 &1369973575
 GameObject:
   m_ObjectHideFlags: 0
@@ -8267,7 +8269,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 144}
+  m_AnchoredPosition: {x: 1, y: 269}
   m_SizeDelta: {x: 135, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715273733
@@ -8283,6 +8285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1715273734}
+  lm: {fileID: 0}
 --- !u!114 &1715273734
 MonoBehaviour:
   m_ObjectHideFlags: 0
