@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public static float startFadeTime = 1.0f;
 
+	public Timer timer;
+
     void Awake()
     {
         System.GC.Collect();
@@ -121,6 +123,7 @@ public class PlayerController : MonoBehaviour
         if (col.CompareTag("Exit"))
         {
             Debug.Log(col.gameObject.name);
+			timer.Finnish ();
             GameClear();
         }else if (col.CompareTag("Enemy"))
         {
