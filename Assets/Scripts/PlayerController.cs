@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
 
     public GameObject ClearUI_BG;
+    public GameObject GameOverUI_BG;
 
     public Joystick joystick;
 
@@ -121,12 +122,21 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log(col.gameObject.name);
             GameClear();
+        }else if (col.CompareTag("Enemy"))
+        {
+            Debug.Log("넌 이미 뒤져있다");
+            GameOver();
         }
     }
 
     void GameClear()
     {
         ClearUI_BG.SetActive(true);
+        Time.timeScale = 0;
+    }
+    void GameOver()
+    {
+        GameOverUI_BG.SetActive(true);
         Time.timeScale = 0;
     }
 }

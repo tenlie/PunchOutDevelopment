@@ -6,10 +6,13 @@ public class FieldOfView : MonoBehaviour {
 
     public float viewRadius;
     [Range(0, 360)]
-    public float viewAngle; 
+    public float viewAngle;
+    public GameObject GameOverUI_BG;
+
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
+    public float deathNumber;
 
     //[HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
@@ -17,7 +20,9 @@ public class FieldOfView : MonoBehaviour {
     void Start()
     {
         StartCoroutine("FindTargetsWithDelay", .2f);
+       
     }
+    
 
 
     IEnumerator FindTargetsWithDelay(float delay)
@@ -32,6 +37,9 @@ public class FieldOfView : MonoBehaviour {
     void FindVisibleTargets()
     {
         visibleTargets.Clear();
+
+       
+        
         //TODO : Length Debugging
         Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
         //Debug.Log("targetsInViewRadiusLength: " + targetsInViewRadius.Length);
@@ -43,13 +51,41 @@ public class FieldOfView : MonoBehaviour {
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
+
+
                 if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
                 {
+                
                     visibleTargets.Add(target);
+                    GameOver();
+
+
+
                 }
             }
         }
+        
+           
+        
     }
+    void GameOver()
+    {
+        deathNumber += Time.deltaTime;
+        
+      
+
+        if (deathNumber>=1.5){
+          
+            GameOverUI_BG.SetActive(true);
+            Time.timeScale = 0;
+            
+        }
+        
+
+        
+    }
+   
+   
 
 
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)

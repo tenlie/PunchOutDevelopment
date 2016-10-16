@@ -1665,6 +1665,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 345695905}
   - 212: {fileID: 345695904}
+  - 114: {fileID: 345695906}
   m_Layer: 0
   m_Name: Enemy1_3 (4)
   m_TagString: Untagged
@@ -1715,6 +1716,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 62
+--- !u!114 &345695906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345695903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 3
+  viewAngle: 98
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &367667635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,6 +2688,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 575803514}
   - 212: {fileID: 575803513}
+  - 114: {fileID: 575803515}
   m_Layer: 0
   m_Name: Enemy1_3
   m_TagString: Untagged
@@ -2715,6 +2739,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 11
+--- !u!114 &575803515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575803512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 3
+  viewAngle: 99
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &604291509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3356,6 +3402,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 795401321}
   - 212: {fileID: 795401320}
+  - 114: {fileID: 795401322}
   m_Layer: 0
   m_Name: Enemy1_3 (1)
   m_TagString: Untagged
@@ -3406,6 +3453,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 19
+--- !u!114 &795401322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795401319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 2
+  viewAngle: 116
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &815805288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3566,7 +3635,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819976939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.94, y: 3.05, z: 0}
+  m_LocalPosition: {x: -2.983, y: 3.093, z: 0}
   m_LocalScale: {x: 0.18009305, y: 0.18009302, z: 0.18009302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -3583,9 +3652,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2, y: 2}
   serializedVersion: 2
-  m_Size: {x: 7, y: 7}
+  m_Size: {x: 0.5, y: 1}
 --- !u!212 &819976942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4066,6 +4135,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 910333867}
   - 212: {fileID: 910333866}
+  - 114: {fileID: 910333868}
   m_Layer: 0
   m_Name: Enemy6
   m_TagString: Untagged
@@ -4116,6 +4186,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 15
+--- !u!114 &910333868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 910333865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 2
+  viewAngle: 265
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &917934857
 GameObject:
   m_ObjectHideFlags: 0
@@ -6309,7 +6401,7 @@ GameObject:
   - 61: {fileID: 1360488003}
   - 50: {fileID: 1360488002}
   - 114: {fileID: 1360488004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6403,6 +6495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   ClearUI_BG: {fileID: 1107588262}
+  GameOverUI_BG: {fileID: 204560321}
   joystick: {fileID: 149692438}
 --- !u!1 &1369973575
 GameObject:
@@ -6445,14 +6538,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: -3.47
+  viewRadius: 3
   viewAngle: 100
+  GameOverUI_BG: {fileID: 204560321}
   targetMask:
     serializedVersion: 2
     m_Bits: 512
   obstacleMask:
     serializedVersion: 2
     m_Bits: 256
+  deathNumber: 0
   visibleTargets: []
 --- !u!1 &1391053916
 GameObject:
@@ -6906,7 +7001,7 @@ GameObject:
   - 114: {fileID: 1482464334}
   m_Layer: 0
   m_Name: Observer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6986,9 +7081,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
-  m_Size: {x: 1.44, y: 3.83}
+  m_Size: {x: 0.2, y: 2}
 --- !u!50 &1482464327
 Rigidbody2D:
   serializedVersion: 2
@@ -7019,12 +7114,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewRadius: 4.92
   viewAngle: 99
+  GameOverUI_BG: {fileID: 204560321}
   targetMask:
     serializedVersion: 2
     m_Bits: 512
   obstacleMask:
     serializedVersion: 2
     m_Bits: 256
+  deathNumber: 0
   visibleTargets: []
 --- !u!114 &1482464329
 MonoBehaviour:
@@ -7344,7 +7441,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1505994291}
   - 212: {fileID: 1505994290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: noun_157404_cc (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7875,6 +7972,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1695720047}
   - 212: {fileID: 1695720046}
+  - 114: {fileID: 1695720048}
   m_Layer: 0
   m_Name: Enemy1_3 (2)
   m_TagString: Untagged
@@ -7925,6 +8023,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 29
+--- !u!114 &1695720048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1695720045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 2
+  viewAngle: 94
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &1700610663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8052,6 +8172,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1723601085}
   - 212: {fileID: 1723601084}
+  - 114: {fileID: 1723601086}
   m_Layer: 0
   m_Name: Enemy1_3 (3)
   m_TagString: Untagged
@@ -8102,6 +8223,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 30
+--- !u!114 &1723601086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723601083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 2
+  viewAngle: 77
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &1745045623
 GameObject:
   m_ObjectHideFlags: 0
@@ -9618,7 +9761,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2024852000}
   - 212: {fileID: 2024851999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: noun_157404_cc (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9924,6 +10067,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2090033170}
   - 212: {fileID: 2090033169}
+  - 114: {fileID: 2090033171}
   m_Layer: 0
   m_Name: Enemy6 (1)
   m_TagString: Untagged
@@ -9974,6 +10118,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1245620302}
   m_RootOrder: 66
+--- !u!114 &2090033171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090033168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 2
+  viewAngle: 279
+  GameOverUI_BG: {fileID: 204560321}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  deathNumber: 0
+  visibleTargets: []
 --- !u!1 &2105672605
 GameObject:
   m_ObjectHideFlags: 0
