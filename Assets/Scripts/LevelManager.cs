@@ -25,6 +25,9 @@ public class LevelManager : MonoBehaviour {
 
     public Text ReadyStartText;
 
+	public float startTime;
+	public GameObject TimerUI;
+
     void Awake()
     {
         Debug.Log("LevelManager >>> Awake()");
@@ -45,6 +48,7 @@ public class LevelManager : MonoBehaviour {
         GameOverUI_BG.SetActive(false);
         PauseUI_BG.SetActive(false);
         Joystick.SetActive(false);
+		TimerUI.SetActive (false);
     }
 
 	void Start ()
@@ -66,6 +70,8 @@ public class LevelManager : MonoBehaviour {
         yield return new WaitForSeconds(2.0f);
         ReadyStartUI.SetActive(false);
         Joystick.SetActive(true);
+		TimerUI.SetActive (true);
+		startTime = Time.time;
         yield break;
     }
 
