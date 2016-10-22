@@ -1363,7 +1363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3608f7ce4716a144db9e740ae9e3af0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  wireColor:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
   UnitsSize: 12.8
   constraint: 1
   camera: {fileID: 193566481}
@@ -1730,12 +1734,8 @@ MonoBehaviour:
   viewRadius: 3
   viewAngle: 98
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &367667635
@@ -2753,12 +2753,8 @@ MonoBehaviour:
   viewRadius: 3
   viewAngle: 99
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &604291509
@@ -3467,12 +3463,8 @@ MonoBehaviour:
   viewRadius: 2
   viewAngle: 116
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &815805288
@@ -4269,12 +4261,8 @@ MonoBehaviour:
   viewRadius: 2
   viewAngle: 265
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &917934857
@@ -6568,7 +6556,7 @@ MonoBehaviour:
   ClearUI_BG: {fileID: 1107588262}
   GameOverUI_BG: {fileID: 204560321}
   joystick: {fileID: 149692438}
-  timer: {fileID: 0}
+  timer: {fileID: 1715273733}
 --- !u!1 &1369973575
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,12 +6601,8 @@ MonoBehaviour:
   viewRadius: 3
   viewAngle: 100
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &1391053916
@@ -7187,12 +7171,8 @@ MonoBehaviour:
   viewRadius: 4.92
   viewAngle: 99
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!114 &1482464329
@@ -7206,8 +7186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: Path_2
-  pathColor: {r: 1, g: 0, b: 0, a: 1}
+  pathName: 506174685f32
+  pathColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
   nodes:
   - {x: -2.3430147, y: 2.6465373, z: 0}
   - {x: -1.3950273, y: 1.4890589, z: 0}
@@ -7226,7 +7210,7 @@ MonoBehaviour:
   - {x: -2.343497, y: 2.6515987, z: 0}
   nodeCount: 15
   initialized: 1
-  initialName: New Path 2
+  initialName: 4e657720506174682032
   pathVisible: 1
 --- !u!114 &1482464330
 MonoBehaviour:
@@ -7239,8 +7223,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: Path_1
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  pathName: 506174685f31
+  pathColor:
+    r: 0
+    g: 1
+    b: 1
+    a: 1
   nodes:
   - {x: -2.3385592, y: 2.6431928, z: 0}
   - {x: -0.37993175, y: 1.7031529, z: 0}
@@ -7264,7 +7252,7 @@ MonoBehaviour:
   - {x: -2.3440175, y: 2.6498702, z: 0}
   nodeCount: 20
   initialized: 1
-  initialName: New Path 1
+  initialName: 4e657720506174682031
   pathVisible: 1
 --- !u!114 &1482464331
 MonoBehaviour:
@@ -7288,8 +7276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: Path_3
-  pathColor: {r: 0.94482756, g: 1, b: 0, a: 1}
+  pathName: 506174685f33
+  pathColor:
+    r: 0.94482756
+    g: 1
+    b: 0
+    a: 1
   nodes:
   - {x: -2.3437645, y: 2.6480963, z: 0}
   - {x: 0.82259905, y: 0.938277, z: 0}
@@ -7308,7 +7300,7 @@ MonoBehaviour:
   - {x: -2.3468223, y: 2.641714, z: 0}
   nodeCount: 15
   initialized: 1
-  initialName: New Path 1
+  initialName: 4e657720506174682031
   pathVisible: 1
 --- !u!114 &1482464333
 MonoBehaviour:
@@ -7321,8 +7313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: Path_4
-  pathColor: {r: 0.000108131695, g: 0, b: 0, a: 1}
+  pathName: 506174685f34
+  pathColor:
+    r: 0.000108131695
+    g: 0
+    b: 0
+    a: 1
   nodes:
   - {x: -2.35212, y: 2.6365058, z: 0}
   - {x: -0.93827677, y: 3.238984, z: 0}
@@ -7346,7 +7342,7 @@ MonoBehaviour:
   - {x: -2.340529, y: 2.643421, z: 0}
   nodeCount: 20
   initialized: 1
-  initialName: New Path 1
+  initialName: 4e657720506174682031
   pathVisible: 1
 --- !u!114 &1482464334
 MonoBehaviour:
@@ -7359,8 +7355,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bffa8aa898b437183cd5617f7b5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathName: Path_5
-  pathColor: {r: 0.24137926, g: 0, b: 1, a: 1}
+  pathName: 506174685f35
+  pathColor:
+    r: 0.24137926
+    g: 0
+    b: 1
+    a: 1
   nodes:
   - {x: -2.3451161, y: 2.642799, z: 0}
   - {x: -0.84830517, y: 1.9408195, z: 0}
@@ -7384,7 +7384,7 @@ MonoBehaviour:
   - {x: -2.3392668, y: 2.647741, z: 0}
   nodeCount: 20
   initialized: 1
-  initialName: New Path 2
+  initialName: 4e657720506174682032
   pathVisible: 1
 --- !u!1 &1483310799
 GameObject:
@@ -8109,12 +8109,8 @@ MonoBehaviour:
   viewRadius: 2
   viewAngle: 94
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &1700610663
@@ -8269,7 +8265,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 269}
+  m_AnchoredPosition: {x: 0, y: 144}
   m_SizeDelta: {x: 135, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1715273733
@@ -8285,6 +8281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1715273734}
+  finnished: 0
   lm: {fileID: 0}
 --- !u!114 &1715273734
 MonoBehaviour:
@@ -8401,12 +8398,8 @@ MonoBehaviour:
   viewRadius: 2
   viewAngle: 77
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &1745045623
@@ -10296,12 +10289,8 @@ MonoBehaviour:
   viewRadius: 2
   viewAngle: 279
   GameOverUI_BG: {fileID: 204560321}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
+  targetMask: {}
+  obstacleMask: {}
   deathNumber: 0
   visibleTargets: []
 --- !u!1 &2105672605

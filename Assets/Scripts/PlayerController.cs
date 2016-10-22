@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
         if (col.CompareTag("Exit"))
         {
             Debug.Log(col.gameObject.name);
-			timer.Finnish ();
+			timer.finnished=true;
             GameClear();
         }else if (col.CompareTag("Enemy"))
         {

@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour {
 
     public Text ReadyStartText;
 
-	public float startTime;
+	public static float startTime;
 	public GameObject TimerUI;
 
     void Awake()
@@ -70,8 +70,12 @@ public class LevelManager : MonoBehaviour {
         yield return new WaitForSeconds(2.0f);
         ReadyStartUI.SetActive(false);
         Joystick.SetActive(true);
+
+
 		TimerUI.SetActive (true);
 		startTime = Time.time;
+
+
         yield break;
     }
 
@@ -100,6 +104,8 @@ public class LevelManager : MonoBehaviour {
         isPaused = true;
         PauseUI_BG.SetActive(true);
         Time.timeScale = 0;
+
+
     }
 
     public void ResumeGame()

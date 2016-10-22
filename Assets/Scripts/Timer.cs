@@ -10,42 +10,53 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
+
 public class Timer : MonoBehaviour {
 
 	public Text timeText;
 	private float startTime; 
-	private bool finnished = false;
-	public LevelManager lm;
+	public bool finnished = false;
+
+	public static string record, clearMessage ;
+
+	public Text clearText;
+
 
 	// Use this for initialization
 	void Start () {
-		startTime = lm.startTime;
+		startTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (finnished)
+		float t = Time.time - startTime;
+		if (finnished) {
+			Finnish ();
 			return;
-
-		float t = Time.time - startTime-4;
+		}
 		string minute = (5+(int)t / 60).ToString ();
 		string seconds = (t % 60).ToString ("f0");
-
 		timeText.text = minute + "시 " + seconds+"분";
+		record = timeText.text;
 
+		//if you clear in 30min, 60min or over 60min
+		if (t <= 30)
+			clearMessage = "빠른 퇴근!!";
+		else if (t <= 60)
+			clearMessage = "나쁘지 않네요!";
+		else if (t > 60)
+			clearMessage = "회사가 집인지 \r\n 집이 회사인지";
 	}
 		
 	public void Finnish()
 	{
 		finnished = true;
 		timeText.color = Color.red;
+
+		clearText.text = record+"!! \r\n"+clearMessage;
 	}
 
-	//게임 끝나는 곳에 넣어줄 코드
-	private void OnTriggerEnter(Collider other)
-	{
-		GameObject.Find ("player").SendMessage ("Finnish");
-	}
+
 
 }
