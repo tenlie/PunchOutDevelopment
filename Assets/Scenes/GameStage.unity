@@ -13345,6 +13345,9 @@ MonoBehaviour:
   GameOverUI_BG: {fileID: 204560321}
   joystick: {fileID: 149692438}
   timer: {fileID: 1715273733}
+  moveSound1: {fileID: 0}
+  moveSound2: {fileID: 0}
+  gameOverSound: {fileID: 0}
 --- !u!1 &1369973575
 GameObject:
   m_ObjectHideFlags: 0
@@ -14420,21 +14423,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482464322}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a832581b73dac2348b63342410f9d856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path:
-  - {fileID: 682288899}
-  - {fileID: 83630513}
-  - {fileID: 1117529145}
-  - {fileID: 1745045624}
-  - {fileID: 1938506575}
-  - {fileID: 949567642}
-  speed: 2.79
-  reachDist: 0.1
-  currentPoint: 0
+  prevPos: {x: 0, y: 0, z: 0}
 --- !u!212 &1482464324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14520,7 +14514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c5046219470fc4caeb9ceea24cbef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 4.92
+  viewRadius: 2.35
   viewAngle: 99
   GameOverUI_BG: {fileID: 204560321}
   targetMask:
