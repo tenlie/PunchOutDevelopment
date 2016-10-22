@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
 
 	public Timer timer;
 
+    public AudioClip moveSound1;
+    public AudioClip moveSound2;
+    public AudioClip gameOverSound;
+
     void Awake()
     {
         System.GC.Collect();
