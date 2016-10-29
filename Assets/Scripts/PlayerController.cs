@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
     {
         //zFoxFadeFilter.instance.FadeIn(Color.black, startFadeTime);
         //startFadeTime = 2.0f;
+        SaveData.LoadOption();
+        moveSpeed = SaveData.PlayerSensitivity * 10;
+        Debug.Log("PlayerSensitivity : "+ moveSpeed);
     }
 
     void Update()

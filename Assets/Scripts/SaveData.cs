@@ -323,6 +323,8 @@ public class SaveData : MonoBehaviour
 
             PlayerPrefs.SetFloat("SoundBGMVolume", SoundBGMVolume);
             PlayerPrefs.SetFloat("SoundSEVolume", SoundSEVolume);
+            PlayerPrefs.SetFloat("PlayerSensitivity", PlayerSensitivity);
+            PlayerPrefs.SetInt("Difficulty", Difficulty);
 
             // Save
             PlayerPrefs.Save();
