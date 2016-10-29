@@ -874,7 +874,7 @@ GameObject:
   - 222: {fileID: 819271983}
   - 114: {fileID: 819271982}
   m_Layer: 5
-  m_Name: volumeSlider
+  m_Name: BGMSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3418,7 +3418,7 @@ GameObject:
   - 222: {fileID: 1953827791}
   - 114: {fileID: 1953827790}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SensitivitySlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3835,6 +3835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OptionUI_BG: {fileID: 998841793}
+  BGMSlider: {fileID: 819271984}
+  SensitivitySlider: {fileID: 1953827792}
+  DifficultyDropdown: {fileID: 1426000117}
 --- !u!1 &2065092625
 GameObject:
   m_ObjectHideFlags: 0
