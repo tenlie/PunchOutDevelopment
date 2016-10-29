@@ -37,6 +37,8 @@ public class LevelManager : MonoBehaviour {
         isGameClear = false;
         isGameOver = false;
 
+        
+
         ReadyStartUI.transform.localPosition = new Vector3(0, 0, 0);
         ClearUI_BG.transform.localPosition = new Vector3(0, 0, 0);
         GameOverUI_BG.transform.localPosition = new Vector3(0, 0, 0);
