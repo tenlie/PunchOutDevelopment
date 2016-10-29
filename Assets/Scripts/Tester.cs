@@ -10,7 +10,7 @@ public class Tester : MonoBehaviour
         if (route == 1)
         {
             iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_1"),
-                                              "time", 20,
+                                              "time", 30,
                                               "easetype", iTween.EaseType.linear,
                                               "oncomplete", "moveNext",
                                               "oncompletetarget", this.gameObject));
@@ -18,7 +18,7 @@ public class Tester : MonoBehaviour
         if (route == 2)
         {
             iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_2"),
-                                              "time", 20,
+                                              "time", 30,
                                               "easetype", iTween.EaseType.linear,
                                               "oncomplete", "moveNext",
                                               "oncompletetarget", this.gameObject));
@@ -26,7 +26,7 @@ public class Tester : MonoBehaviour
         if (route == 3)
         {
             iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_3"),
-                                              "time", 20,
+                                              "time", 30,
                                               "easetype", iTween.EaseType.linear,
                                               "oncomplete", "moveNext",
                                               "oncompletetarget", this.gameObject));
@@ -34,7 +34,7 @@ public class Tester : MonoBehaviour
         if (route == 4)
         {
             iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_4"),
-                                              "time", 20,
+                                              "time", 30,
                                               "easetype", iTween.EaseType.linear,
                                               "oncomplete", "moveNext",
                                               "oncompletetarget", this.gameObject));
@@ -47,7 +47,7 @@ public class Tester : MonoBehaviour
         if (route == 1)
         {
             iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_2"),
-                                                  "time", 20,
+                                                  "time", 30,
                                                    "easetype", iTween.EaseType.linear,
                                                    "oncomplete", "moveNext",
                                                    "oncompletetarget", this.gameObject));
@@ -55,7 +55,7 @@ public class Tester : MonoBehaviour
         if (route == 2)
         {
             iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_3"),
-                                                  "time", 20,
+                                                  "time", 30,
                                                    "easetype", iTween.EaseType.linear,
                                                    "oncomplete", "moveNext",
                                                    "oncompletetarget", this.gameObject));
@@ -63,7 +63,7 @@ public class Tester : MonoBehaviour
         if (route == 3)
         {
             iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_4"),
-                                                  "time", 25,
+                                                  "time", 30,
                                                    "easetype", iTween.EaseType.linear,
                                                    "oncomplete", "moveNext",
                                                    "oncompletetarget", this.gameObject));
@@ -71,7 +71,7 @@ public class Tester : MonoBehaviour
         if (route == 4)
         {
             iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_5"),
-                                                  "time", 25,
+                                                  "time", 30,
                                                    "easetype", iTween.EaseType.linear,
                                                    "oncomplete", "moveNext",
                                                    "oncompletetarget", this.gameObject));
