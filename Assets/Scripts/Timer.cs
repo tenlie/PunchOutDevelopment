@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//타이머를 만들기 위해 끌어와야 하는 거 
+//타이머를 만들기 위해 끌어와야 하는 거
 using UnityEngine.UI;
 
 
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 public class Timer : MonoBehaviour {
 
 	public Text timeText;
-	private float startTime; 
+	private float startTime;
 	public bool finnished = false;
 
 	public static string record, clearMessage ;
@@ -22,11 +22,15 @@ public class Timer : MonoBehaviour {
 	public Text clearText;
 
 
+	public SpriteRenderer spriteRenderer;
+
 	// Use this for initialization
 	void Start () {
 		startTime = Time.time;
+
+		spriteRenderer.sprite = Resources.Load<Sprite> ("Background/5pm")as Sprite;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -46,15 +50,25 @@ public class Timer : MonoBehaviour {
 		else if (t <= 60)
 			clearMessage = "나쁘지 않네요!";
 		else if (t > 60)
-			clearMessage = "회사가 집인지 \r\n 집이 회사인지";
+			clearMessage = "회사가 집인지...";
+
+		//BackgroundImage Changes
+		if (minute+seconds == "530") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/6pm")as Sprite;
+		else if(minute+seconds == "60") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/7pm")as Sprite;
+		else if(minute+seconds == "630") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/8pm")as Sprite;
+
+
 	}
-		
+
 	public void Finnish()
 	{
 		finnished = true;
 		timeText.color = Color.red;
-
 		clearText.text = record+"!! \r\n"+clearMessage;
+
+		// 저장 시  minute + second  형태로 저장  ex) "1009"
+
+
 	}
 
 
