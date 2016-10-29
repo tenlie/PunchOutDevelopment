@@ -14,6 +14,8 @@ public class SaveData : MonoBehaviour
     // Option
     public static float SoundBGMVolume = 1.0f;
     public static float SoundSEVolume = 1.0f;
+    public static float PlayerSensitivity = 30.0f;
+    public static int Difficulty = 0;
 
     // Etc(Don't Save)
     public static bool continuePlay = false;
@@ -306,14 +308,28 @@ public class SaveData : MonoBehaviour
 
                 SoundBGMVolume = PlayerPrefs.GetFloat("SoundBGMVolume");
                 SoundSEVolume = PlayerPrefs.GetFloat("SoundSEVolume");
+                PlayerSensitivity = PlayerPrefs.GetFloat("PlayerSensitivity");
+                Difficulty = PlayerPrefs.GetInt("Difficulty");
 
+                Debug.Log("SoundBGMVolume : " + SoundBGMVolume);
+                Debug.Log("SoundSEVolume : " + SoundSEVolume);
+                Debug.Log("PlayerSensitivity : " + PlayerSensitivity);
+                Debug.Log("Difficulty : " + Difficulty);
                 Debug.Log("SaveData.LoadOption : End");
             }
         }
         catch (System.Exception e)
         {
             Debug.LogWarning("SaveData.LoadOption : Failed (" + e.Message + ")");
+
+
         }
+
+        Debug.Log("SoundBGMVolume : " + SoundBGMVolume);
+        Debug.Log("SoundSEVolume : " + SoundSEVolume);
+        Debug.Log("PlayerSensitivity : " + PlayerSensitivity);
+        Debug.Log("Difficulty : " + Difficulty);
+
         return false;
     }
 

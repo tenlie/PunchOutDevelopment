@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartScreen : MonoBehaviour {
 
     public GameObject OptionUI_BG;
+    public Slider BGMSlider;
+    public Slider SensitivitySlider;
+    public Dropdown DifficultyDropdown;
     private bool isOptionOpen;
+
 
     private string jumpSceneName;
     
@@ -49,6 +54,10 @@ public class StartScreen : MonoBehaviour {
         isOptionOpen = true;
         Time.timeScale = 0;
         OptionUI_BG.SetActive(true);
+
+        SetOptionData();
+
+
     }
 
     public void Close_OptionUI()
@@ -58,10 +67,28 @@ public class StartScreen : MonoBehaviour {
         isOptionOpen = false;
         Time.timeScale = 1;
         OptionUI_BG.SetActive(false);
+        SaveOptionData();
     }
 
     void SceneJump() {
         Debug.Log(string.Format("Start Game : {0}", jumpSceneName));
         SceneManager.LoadScene(jumpSceneName);
     }
+
+    public void SetOptionData()
+    {
+        BGMSlider.value = SaveData.SoundBGMVolume;
+        SensitivitySlider.value = SaveData.PlayerSensitivity;
+        DifficultyDropdown.value = SaveData.Difficulty;
+    }
+
+    public void SaveOptionData()
+    {
+        SaveData.SoundBGMVolume = BGMSlider.value;
+        SaveData.PlayerSensitivity = SensitivitySlider.value;
+        SaveData.Difficulty = DifficultyDropdown.value;
+
+        SaveData.SaveOption();
+    }
+
 }
