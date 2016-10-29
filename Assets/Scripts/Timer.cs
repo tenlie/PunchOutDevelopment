@@ -10,7 +10,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-
+/// 이 클래스는 타이머 기능과 시간의 변화에 따른 배경화면 변화 기능을 갖고 있음.  - 우현
 public class Timer : MonoBehaviour {
 
 	public Text timeText;
@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour {
 	void Start () {
 		startTime = Time.time;
 
-		spriteRenderer.sprite = Resources.Load<Sprite> ("Background/5pm")as Sprite;
+		//spriteRenderer.sprite = Resources.Load<Sprite> ("Background/5pm")as Sprite;
 	}
 
 	// Update is called once per frame

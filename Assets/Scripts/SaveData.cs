@@ -216,12 +216,17 @@ public class SaveData : MonoBehaviour
     }
 
     // === コード（ハイスコアデータ・セーブロード） ================
+	// punchoutcnt - playerControl에 있음.
+	// playerSocre - Timer 에 있음.
+
     public static bool SaveHiScore(string punchOutCnt, string playerScore)
     {
 
         LoadHiScore();
 
-        try
+		//if rank high score... 
+        
+		try
         {
             Debug.Log("SaveData.SaveHiScore : Start");
             // Hiscore Set & Sort
@@ -279,8 +284,8 @@ public class SaveData : MonoBehaviour
         string tempCnt = scorelist[i - 1, 0];
         string tempScore = scorelist[i - 1, 1];
 
-        scorelist[i - 1, 0] = scorelist[j, 0];
-        scorelist[i - 1, 1] = scorelist[j, 1];
+        scorelist[i - 1, 0] = scorelist[i, 0];
+        scorelist[i - 1, 1] = scorelist[i, 1];
 
         scorelist[i, 0] = tempCnt;
         scorelist[i, 1] = tempScore;
