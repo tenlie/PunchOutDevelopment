@@ -57,6 +57,7 @@ public class LevelManager : MonoBehaviour {
 
         //started = DateTime.UtcNow;
         StartCoroutine("ReadyStartWork");
+
 	}
 
     IEnumerator ReadyStartWork()

@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip moveSound2;
     public AudioClip gameOverSound;
 
+    public static int punchOutCnt { get; set; }
+
     void Awake()
     {
         System.GC.Collect();

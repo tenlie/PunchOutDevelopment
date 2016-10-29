@@ -8,7 +8,8 @@ public class SaveData : MonoBehaviour
     public static string SaveDate = "(non)";
 
     //static int[] HiScoreInitData = new int[10] { 300000, 100000, 75000, 50000, 25000, 10000, 7500, 5000, 2500, 1000 };
-    //public static int[] HiScore = new int[10] { 300000, 100000, 75000, 50000, 25000, 10000, 7500, 5000, 2500, 1000 };
+    public static int[] HiScoreCnt = new int[3] { 0, 0, 0 };
+    public static string[] HiScore = new string[3] { "", "", "" };
 
     // Option
     public static float SoundBGMVolume = 1.0f;
@@ -67,18 +68,19 @@ public class SaveData : MonoBehaviour
             SaveDataHeader("PunchOut_GamePlay");
             { // PlayerData
                 zFoxDataPackString playerData = new zFoxDataPackString();
+                playerData.Add("Player_PunchOutCnt", PlayerController.punchOutCnt);
                 /*
-                playerData.Add("Player_HPMax", PlayerController.nowHpMax);
                 playerData.Add("Player_HP", PlayerController.nowHp);
                 playerData.Add("Player_Score", PlayerController.score);
                 playerData.Add("Player_checkPointSceneName", PlayerController.checkPointSceneName);
                 playerData.Add("Player_checkPointLabelName", PlayerController.checkPointLabelName);
                 playerData.PlayerPrefsSetStringUTF8("PlayerData", playerData.EncodeDataPackString());
-                */            
-    //Debug.Log(playerData.EncodeDataPackString ());
+                */
+
+                Debug.Log(playerData.EncodeDataPackString ());
             }
             { // StageData
-                zFoxDataPackString stageData = new zFoxDataPackString();
+                //zFoxDataPackString stageData = new zFoxDataPackString();
                 /*
                 zFoxUID[] uidList = GameObject.Find("Stage").GetComponentsInChildren<zFoxUID>();
                 foreach (zFoxUID uidItem in uidList)
@@ -129,9 +131,10 @@ public class SaveData : MonoBehaviour
                 { // PlayerData
                     zFoxDataPackString playerData = new zFoxDataPackString();
                     playerData.DecodeDataPackString(playerData.PlayerPrefsGetStringUTF8("PlayerData"));
-                    //Debug.Log(playerData.PlayerPrefsGetStringUTF8 ("PlayerData"));
+                    Debug.Log(playerData.PlayerPrefsGetStringUTF8 ("PlayerData"));
+                    
+                    PlayerController.punchOutCnt = (int)playerData.GetData("Player_PunchOutCnt");
                     /*
-                    PlayerController.nowHpMax = (float)playerData.GetData("Player_HPMax");
                     PlayerController.nowHp = (float)playerData.GetData("Player_HP");
                     PlayerController.score = (int)playerData.GetData("Player_Score");
                     PlayerController.checkPointEnabled = (bool)playerData.GetData("Player_checkPointEnabled");
@@ -142,8 +145,8 @@ public class SaveData : MonoBehaviour
                 // StageData
                 if (PlayerPrefs.HasKey("StageData_" + SceneManager.GetActiveScene().name))
                 {
-                    zFoxDataPackString stageData = new zFoxDataPackString();
-                    stageData.DecodeDataPackString(stageData.PlayerPrefsGetStringUTF8("StageData_" + SceneManager.GetActiveScene().name));
+                    //zFoxDataPackString stageData = new zFoxDataPackString();
+                    //stageData.DecodeDataPackString(stageData.PlayerPrefsGetStringUTF8("StageData_" + SceneManager.GetActiveScene().name));
                     //Debug.Log(stageData.PlayerPrefsGetStringUTF8 ("StageData_" + Application.loadedLevelName));
 
                     /*
@@ -163,8 +166,9 @@ public class SaveData : MonoBehaviour
                 }
                 if (allData)
                 { // EventData
-                    zFoxDataPackString eventData = new zFoxDataPackString();
-                    eventData.DecodeDataPackString(eventData.PlayerPrefsGetStringUTF8("EventData"));
+
+                    //zFoxDataPackString eventData = new zFoxDataPackString();
+                    //eventData.DecodeDataPackString(eventData.PlayerPrefsGetStringUTF8("EventData"));
                     //Debug.Log(playerData.PlayerPrefsGetStringUTF8 ("PlayerData"));
 
                     /*
@@ -198,7 +202,7 @@ public class SaveData : MonoBehaviour
     }
 
     // === コード（ハイスコアデータ・セーブロード） ================
-    public static bool SaveHiScore(int playerScore)
+    public static bool SaveHiScore(string playerScore)
     {
 
         LoadHiScore();
@@ -208,15 +212,15 @@ public class SaveData : MonoBehaviour
             Debug.Log("SaveData.SaveHiScore : Start");
             // Hiscore Set & Sort
             newRecord = 0;
-            int[] scoreList = new int[11];
+            string[] scoreList = new string[HiScore.Length+1];
             //HiScore.CopyTo(scoreList, 0);
-            scoreList[10] = playerScore;
+            scoreList[scoreList.Length-1] = playerScore;
             System.Array.Sort(scoreList);
             System.Array.Reverse(scoreList);
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < HiScore.Length; i++)
             {
-                //HiScore[i] = scoreList[i];
-                //if (playerScore == HiScore[i])
+                HiScore[i] = scoreList[i];
+                if (playerScore == HiScore[i])
                 {
                     newRecord = i + 1;
                 }
@@ -225,9 +229,9 @@ public class SaveData : MonoBehaviour
             // Hiscore Save
             SaveDataHeader("SDG_HiScore");
             zFoxDataPackString hiscoreData = new zFoxDataPackString();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < HiScore.Length; i++)
             {
-                //hiscoreData.Add("Rank" + (i + 1), HiScore[i]);
+                hiscoreData.Add("Rank" + (i + 1), HiScore[i]);
             }
             hiscoreData.PlayerPrefsSetStringUTF8("HiScoreData", hiscoreData.EncodeDataPackString());
 
@@ -252,10 +256,10 @@ public class SaveData : MonoBehaviour
                 Debug.Log("SaveData.LoadHiScore : Start");
                 zFoxDataPackString hiscoreData = new zFoxDataPackString();
                 hiscoreData.DecodeDataPackString(hiscoreData.PlayerPrefsGetStringUTF8("HiScoreData"));
-                //Debug.Log(hiscoreData.PlayerPrefsGetStringUTF8 ("HiScoreData"));
-                for (int i = 0; i < 10; i++)
+                Debug.Log(hiscoreData.PlayerPrefsGetStringUTF8 ("HiScoreData"));
+                for (int i = 0; i < HiScore.Length; i++)
                 {
-                    //HiScore[i] = (int)hiscoreData.GetData("Rank" + (i + 1));
+                    HiScore[i] = (string)hiscoreData.GetData("Rank" + (i + 1));
                 }
                 Debug.Log("SaveData.LoadHiScore : End");
             }
