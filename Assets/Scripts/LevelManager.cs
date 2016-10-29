@@ -104,8 +104,6 @@ public class LevelManager : MonoBehaviour {
         isPaused = true;
         PauseUI_BG.SetActive(true);
         Time.timeScale = 0;
-
-
     }
 
     public void ResumeGame()
