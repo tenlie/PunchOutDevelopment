@@ -18,7 +18,6 @@ public class SoundManager : MonoBehaviour {
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-
 	}
 
     public void PlaySinge(AudioClip clip)

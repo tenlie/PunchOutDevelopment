@@ -3,35 +3,51 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartScreen : MonoBehaviour {
+public class StartScreen : MonoBehaviour
+{
 
     public GameObject OptionUI_BG;
+    public GameObject RankingUI_BG;
+    public GameObject CreditUI_BG;
+
     public Slider BGMSlider;
     public Slider SensitivitySlider;
     public Dropdown DifficultyDropdown;
-    private bool isOptionOpen;
 
+    private bool isOptionUIOpen;
+    private bool isRankingUIOpen;
+    private bool isCregitUIOpen;
+
+    public Text Rank1;
+    public Text Rank2;
+    public Text Rank3;
 
     private string jumpSceneName;
-    
 
-	void Start ()
+    void Start()
     {
         Debug.Log("StartScreen >>> Start()");
 
         System.GC.Collect();
         zFoxFadeFilter.instance.FadeIn(Color.black, 1.0f);
-        isOptionOpen = false;
 
-        OptionUI_BG.transform.localPosition = new Vector3(0,0,0);
+        isOptionUIOpen = false;
+        isRankingUIOpen = false;
+        isCregitUIOpen = false;
+
+        OptionUI_BG.transform.localPosition = new Vector3(0, 0, 0);
         OptionUI_BG.SetActive(false);
+        RankingUI_BG.transform.localPosition = new Vector3(0, 0, 0);
+        RankingUI_BG.SetActive(false);
+        CreditUI_BG.transform.localPosition = new Vector3(0, 0, 0);
+        CreditUI_BG.SetActive(false);
     }
 
     void Button_Play(MenuObject_Button button)
     {
         Debug.Log("StartScreen >>> Button_Play()");
 
-        if (isOptionOpen)
+        if (isOptionUIOpen)
         {
             return;
         }
@@ -45,18 +61,15 @@ public class StartScreen : MonoBehaviour {
     {
         Debug.Log("StartScreen >>> Button_Option()");
 
-        if (isOptionOpen)
+        if (isOptionUIOpen)
         {
             return;
         }
 
         //옵션화면 활성화
-        isOptionOpen = true;
+        isOptionUIOpen = true;
         Time.timeScale = 0;
         OptionUI_BG.SetActive(true);
-
-        SetOptionData();
-
 
     }
 
@@ -64,13 +77,14 @@ public class StartScreen : MonoBehaviour {
     {
         Debug.Log("StartScreen >>> Close_OptionUI()");
 
-        isOptionOpen = false;
+        isOptionUIOpen = false;
         Time.timeScale = 1;
         OptionUI_BG.SetActive(false);
         SaveOptionData();
     }
 
-    void SceneJump() {
+    void SceneJump()
+    {
         Debug.Log(string.Format("Start Game : {0}", jumpSceneName));
         SceneManager.LoadScene(jumpSceneName);
     }
@@ -89,6 +103,50 @@ public class StartScreen : MonoBehaviour {
         SaveData.Difficulty = DifficultyDropdown.value;
 
         SaveData.SaveOption();
+    }
+
+    void Button_Ranking(MenuObject_Button button)
+    {
+        Debug.Log("StartScreen >>> Button_Ranking()");
+
+        SetRankingData();
+        RankingUI_BG.SetActive(true);
+    }
+
+    public void SetRankingData()
+    {
+        Debug.Log("StartScreen >>> SetRankingData()");
+        SaveData.LoadHiScore();
+        Debug.Log("SaveData.HiScore.Length: " + SaveData.HiScore.GetLength(0));
+
+        for (int i = 0; i < SaveData.HiScore.GetLength(0); i++)
+        {
+            Debug.Log("Ranking" + (i + 1) + ">>> Score: " + SaveData.HiScore[i, 1].Substring(0, 2) + "시" + SaveData.HiScore[i, 1].Substring(2, 2) 
+                + "분 PunchOutCnt: " + SaveData.HiScore[i, 0]);
+        }
+
+        Rank1.text = SaveData.HiScore[0, 1].Substring(0, 2) + "시" + SaveData.HiScore[0, 1].Substring(2, 2) + "분    " + SaveData.HiScore[0, 0];
+        Rank2.text = SaveData.HiScore[1, 1].Substring(0, 2) + "시" + SaveData.HiScore[1, 1].Substring(2, 2) + "분    " + SaveData.HiScore[1, 0];
+        Rank3.text = SaveData.HiScore[2, 1].Substring(0, 2) + "시" + SaveData.HiScore[2, 1].Substring(2, 2) + "분    " + SaveData.HiScore[2, 0];
+    }
+
+    public void Close_RankingUI()
+    {
+        Debug.Log("StartScreen >>> Close_RankingUI()");
+
+        RankingUI_BG.SetActive(false);
+    }
+
+    void Button_Credit(MenuObject_Button button)
+    {
+        Debug.Log("StartScreen >>> Button_Credit()");
+        SetOptionData();
+        CreditUI_BG.SetActive(true);
+    }
+
+    public void Close_CreditUI()
+    {
+        CreditUI_BG.SetActive(false);
     }
 
 }

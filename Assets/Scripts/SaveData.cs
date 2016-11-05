@@ -13,8 +13,8 @@ public class SaveData : MonoBehaviour
     public static string SaveDate = "(non)";
 
     //static int[] HiScoreInitData = new int[10] { 300000, 100000, 75000, 50000, 25000, 10000, 7500, 5000, 2500, 1000 };
-    //public static int[] HiScoreCnt = new int[3] { 0, 0, 0 };
-    public static string[,] HiScore = new string[3, 2];
+    public static string[,] HiScore = new string[3,2] { {"1","0530" }, { "5", "0630" }, { "7", "0730" } };
+    //public static string[,] HiScore = new string[3, 2];
 
     // Option
     public static float SoundBGMVolume = 1.0f;
@@ -29,9 +29,9 @@ public class SaveData : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        for (int i = 0; i < HiScore.Length; i++)
+        for (int i = 0; i < HiScore.GetLength(0); i++)
         {
-            for (int j = 0; j < HiScore[i, j].Length; j++)
+            for (int j = 0; j < HiScore.GetLength(1); j++)
             {
                 HiScore[i, j] = "";
             }
@@ -215,18 +215,17 @@ public class SaveData : MonoBehaviour
         return "StageA";
     }
 
-    // === コード（ハイスコアデータ・セーブロード） ================
-	// punchoutcnt - playerControl에 있음.
-	// playerSocre - Timer 에 있음.
+    // punchoutcnt - playerControl에 있음.
+    // playerSocre - Timer 에 있음.
 
     public static bool SaveHiScore(string punchOutCnt, string playerScore)
     {
 
         LoadHiScore();
 
-		//if rank high score... 
-        
-		try
+        //if rank high score... 
+
+        try
         {
             Debug.Log("SaveData.SaveHiScore : Start");
             // Hiscore Set & Sort
@@ -235,28 +234,19 @@ public class SaveData : MonoBehaviour
             HiScore.CopyTo(scoreList, 0);
             scoreList[scoreList.Length - 1, 0] = punchOutCnt;
             scoreList[scoreList.Length - 1, 1] = playerScore;
-            //System.Array.Sort(scoreList);
-            //System.Array.Reverse(scoreList);
 
             //Sort ScoreList
-            for (int i = 1; i < scoreList.Length - 1; i++)
+            for (int i = 0; i < scoreList.Length - 1; i++)
             {
-                if (Convert.ToInt32(scoreList[i, 1]) > Convert.ToInt32(scoreList[i - 1, 1]))
+                for (int j = 1; j < scoreList.Length - i; j++)
                 {
-                    swap(scoreList, i);
-
+                    if (Convert.ToInt32(scoreList[j - 1, 1]) < Convert.ToInt32(scoreList[j, 1]))
+                    {
+                        swap(scoreList, j);
+                    }
                 }
             }
-
-            for (int i = 0; i < HiScore.Length; i++)
-            {
-                //    HiScore[i] = scoreList[i];
-                //    if (playerScore == HiScore[i])
-                //    {
-                //        newRecord = i + 1;
-                //    }
-            }
-
+            
             // Hiscore Save
             SaveDataHeader("SDG_HiScore");
             zFoxDataPackString hiscoreData = new zFoxDataPackString();
@@ -303,8 +293,8 @@ public class SaveData : MonoBehaviour
                 Debug.Log(hiscoreData.PlayerPrefsGetStringUTF8("HiScoreData"));
                 for (int i = 0; i < HiScore.Length; i++)
                 {
-                    //HiScore[i] = (string)hiscoreData.GetData("Rank" + (i + 1));
-
+                    HiScore[i,0] = (string)hiscoreData.GetData("PunchOutCntforRank" + (i + 1));
+                    HiScore[i,1] = (string)hiscoreData.GetData("HiScoreforRank" + (i + 1));
                 }
                 Debug.Log("SaveData.LoadHiScore : End");
             }

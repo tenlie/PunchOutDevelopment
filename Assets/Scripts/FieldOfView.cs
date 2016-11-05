@@ -37,8 +37,6 @@ public class FieldOfView : MonoBehaviour {
     void FindVisibleTargets()
     {
         visibleTargets.Clear();
-
-       
         
         //TODO : Length Debugging
         Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
@@ -51,23 +49,15 @@ public class FieldOfView : MonoBehaviour {
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-
-
                 if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
                 {
-                
                     visibleTargets.Add(target);
                     GameOver();
-
-
-
                 }
             }
         }
-        
-           
-        
     }
+
     void GameOver()
     {
         deathNumber += Time.deltaTime;
