@@ -6,75 +6,57 @@ public class Tester : MonoBehaviour
 
     void Start()
     {
-        int route = Random.Range(1, 4);
-        if (route == 1)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_1"),
-                                              "time", 30,
-                                              "easetype", iTween.EaseType.linear,
-                                              "oncomplete", "moveNext",
-                                              "oncompletetarget", this.gameObject));
-        }
-        if (route == 2)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_2"),
-                                              "time", 30,
-                                              "easetype", iTween.EaseType.linear,
-                                              "oncomplete", "moveNext",
-                                              "oncompletetarget", this.gameObject));
-        }
-        if (route == 3)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_3"),
-                                              "time", 30,
-                                              "easetype", iTween.EaseType.linear,
-                                              "oncomplete", "moveNext",
-                                              "oncompletetarget", this.gameObject));
-        }
-        if (route == 4)
-        {
-            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_4"),
-                                              "time", 30,
-                                              "easetype", iTween.EaseType.linear,
-                                              "oncomplete", "moveNext",
-                                              "oncompletetarget", this.gameObject));
-        }
+        MoveToWaypoint();
     }
 
-    void moveNext()
+    void MoveToWaypoint()
     {
-        int route = Random.Range(1, 4);
-        if (route == 1)
+        int routeA = Random.Range(1, 2);
+        if (routeA == 1)
         {
-            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_2"),
-                                                  "time", 30,
-                                                   "easetype", iTween.EaseType.linear,
-                                                   "oncomplete", "moveNext",
-                                                   "oncompletetarget", this.gameObject));
+            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_1"),
+                                              "time", 70,
+                                              "easetype", iTween.EaseType.linear,
+                                              //"oncomplete", "MoveToBack",
+                                              "looptype", iTween.LoopType.pingPong));
         }
-        if (route == 2)
+        if (routeA == 2)
         {
-            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_3"),
-                                                  "time", 30,
-                                                   "easetype", iTween.EaseType.linear,
-                                                   "oncomplete", "moveNext",
-                                                   "oncompletetarget", this.gameObject));
+            iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPathReversed("Path_1"),
+                                              "time", 70,
+                                              "easetype", iTween.EaseType.linear,
+                                              //"oncomplete", "MoveToBack",
+                                              "looptype", iTween.LoopType.pingPong
+                                              //"oncompleterget", this.gameObject,
+                                              //"movetopath", false
+                                              ));
         }
-        if (route == 3)
+
+    }
+
+    void MoveToBack()
+    {
+        int routeB = Random.Range(1, 3);
+        if (routeB == 1)
         {
-            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_4"),
-                                                  "time", 30,
+            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPathReversed("Path_1"),
+                                                  "time", 10,
                                                    "easetype", iTween.EaseType.linear,
-                                                   "oncomplete", "moveNext",
-                                                   "oncompletetarget", this.gameObject));
+                                                   "looptype", iTween.LoopType.pingPong));
         }
-        if (route == 4)
+        if (routeB == 2)
         {
-            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_5"),
-                                                  "time", 30,
+            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPathReversed("Path_2"),
+                                                  "time", 10,
                                                    "easetype", iTween.EaseType.linear,
-                                                   "oncomplete", "moveNext",
-                                                   "oncompletetarget", this.gameObject));
+                                                   "looptype", iTween.LoopType.pingPong));
+        }
+        if (routeB == 3)
+        {
+            iTween.MoveFrom(gameObject, iTween.Hash("path", iTweenPath.GetPathReversed("Path_3"),
+                                                  "time", 10,
+                                                   "easetype", iTween.EaseType.linear,
+                                                   "looptype", iTween.LoopType.pingPong));
         }
     }
 
