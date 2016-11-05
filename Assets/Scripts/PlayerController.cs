@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject ClearUI_BG;
     public GameObject GameOverUI_BG;
+    public GameObject WarningMark;
 
     public Joystick joystick;
 
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip moveSound1;
     public AudioClip moveSound2;
     public AudioClip gameOverSound;
+
+    public FieldOfView view;
 
     public static int punchOutCnt { get; set; }
 
@@ -139,12 +142,29 @@ public class PlayerController : MonoBehaviour
             Debug.Log("넌 이미 뒤져있다");
             GameOver();
         }
+        else if (col.CompareTag("Print"))
+        {
+            Debug.Log("잠깐 쉬러왔어요");
+            PrintOut();
+        }
     }
 
     void GameClear()
     {
         ClearUI_BG.SetActive(true);
         Time.timeScale = 0;
+    }
+    void PrintOut()
+    {
+        Debug.Log("데스넘버 초기화");
+        GameObject[] enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        Debug.Log(enemy.Length);
+        for(int i=0; i<enemy.Length; i++)
+        {
+            GameObject enemies = enemy[i];
+            enemies.GetComponent<FieldOfView>().deathNumber = 0;
+            Debug.Log(enemies.GetComponent<FieldOfView>().deathNumber);
+        }
     }
     void GameOver()
     {
