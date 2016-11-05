@@ -22,11 +22,17 @@ public class PathFollower : MonoBehaviour
             Vector3 direction = transform.position - prevPos;
             direction.Normalize();
             float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            //transform.rotation = Quaternion.Euler(0f, 0f, rotation);
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            transform.rotation = Quaternion.Euler(0f, 0f, rotation);
             prevPos = transform.position;
+
+
         }
     }
+
+
+
+
 
     /*
     void OnDrawGizmos()

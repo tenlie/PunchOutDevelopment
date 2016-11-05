@@ -7165,6 +7165,7 @@ GameObject:
   - 114: {fileID: 1482464329}
   - 114: {fileID: 1482464332}
   - 114: {fileID: 1482464333}
+  - 95: {fileID: 1482464334}
   m_Layer: 0
   m_Name: Observer
   m_TagString: Enemy
@@ -7222,7 +7223,7 @@ Transform:
   m_GameObject: {fileID: 1482464322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.33, y: 1.361, z: 0}
-  m_LocalScale: {x: 0.23361535, y: 0.19211623, z: 0.36740416}
+  m_LocalScale: {x: 0.2336154, y: 0.19211623, z: 0.36740416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7528,6 +7529,23 @@ MonoBehaviour:
   initialized: 1
   initialName: New Path 1
   pathVisible: 1
+--- !u!95 &1482464334
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482464322}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b6b4553dd5fc0540973ef2b9e63653c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1483310799
 GameObject:
   m_ObjectHideFlags: 0
