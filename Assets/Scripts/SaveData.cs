@@ -13,8 +13,8 @@ public class SaveData : MonoBehaviour
     public static string SaveDate = "(non)";
 
     //static int[] HiScoreInitData = new int[10] { 300000, 100000, 75000, 50000, 25000, 10000, 7500, 5000, 2500, 1000 };
-    public static string[,] HiScore = new string[3,2] { {"1","0530" }, { "5", "0630" }, { "7", "0730" } };
-    //public static string[,] HiScore = new string[3, 2];
+    //public static string[,] HiScore = new string[3,2] { {"1","0530" }, { "5", "0630" }, { "7", "0730" } };
+    public static string[,] HiScore = new string[3, 2];
 
     // Option
     public static float SoundBGMVolume = 1.0f;
