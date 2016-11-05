@@ -8,6 +8,7 @@ public class FieldOfView : MonoBehaviour {
     [Range(0, 360)]
     public float viewAngle;
     public GameObject GameOverUI_BG;
+    public GameObject WarningMark;
 
 
     public LayerMask targetMask;
@@ -37,7 +38,7 @@ public class FieldOfView : MonoBehaviour {
     void FindVisibleTargets()
     {
         visibleTargets.Clear();
-
+        WarningMark.SetActive(false);
        
         
         //TODO : Length Debugging
@@ -55,6 +56,11 @@ public class FieldOfView : MonoBehaviour {
 
                 if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
                 {
+<<<<<<< HEAD
+=======
+
+                    WarningMark.SetActive(true);
+>>>>>>> 3614622030a0948aa92fc95cd9f5af502eed7e51
                     visibleTargets.Add(target);
                     GameOver();
                 }
