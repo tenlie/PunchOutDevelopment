@@ -5,24 +5,26 @@ using UnityEngine.UI;
 
 public class StartScreen : MonoBehaviour
 {
-
     public GameObject OptionUI_BG;
-    public GameObject RankingUI_BG;
-    public GameObject CreditUI_BG;
-
+    private bool isOptionUIOpen;
     public Slider BGMSlider;
     public Slider SensitivitySlider;
     public Dropdown DifficultyDropdown;
 
-    private bool isOptionUIOpen;
+    public GameObject RankingUI_BG;
     private bool isRankingUIOpen;
-    private bool isCregitUIOpen;
-
     public Text Rank1;
     public Text Rank2;
     public Text Rank3;
 
+    public GameObject CreditUI_BG;
+    private bool isCregitUIOpen;
+
+    public AudioSource BGM;
+
     private string jumpSceneName;
+
+    private bool isPaused;
 
     void Start()
     {
@@ -30,6 +32,8 @@ public class StartScreen : MonoBehaviour
 
         System.GC.Collect();
         zFoxFadeFilter.instance.FadeIn(Color.black, 1.0f);
+
+        isPaused = false;
 
         isOptionUIOpen = false;
         isRankingUIOpen = false;
@@ -43,6 +47,38 @@ public class StartScreen : MonoBehaviour
         CreditUI_BG.SetActive(false);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
+    public void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        BGM.Pause();
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        BGM.Play();
+    }
+
     void Button_Play(MenuObject_Button button)
     {
         Debug.Log("StartScreen >>> Button_Play()");
@@ -52,6 +88,7 @@ public class StartScreen : MonoBehaviour
             return;
         }
 
+        BGM.Stop();
         zFoxFadeFilter.instance.FadeOut(Color.white, 1.0f);
         jumpSceneName = "GameStage";
         Invoke("SceneJump", 1.2f);
@@ -148,5 +185,4 @@ public class StartScreen : MonoBehaviour
     {
         CreditUI_BG.SetActive(false);
     }
-
 }
