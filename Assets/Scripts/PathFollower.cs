@@ -6,13 +6,17 @@ public class PathFollower : MonoBehaviour
     public Rigidbody2D rb2D { get; set; }
     public Vector3 prevPos;
 
+
     // Use this for initialization
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+
         prevPos = transform.position;
         StartCoroutine("RotateObserver");
+ 
     }
+
 
     IEnumerator RotateObserver()
     {
