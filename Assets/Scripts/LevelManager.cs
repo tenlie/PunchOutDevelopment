@@ -123,8 +123,10 @@ public class LevelManager : MonoBehaviour {
     {
         Debug.Log("LevelManager >>> ReturnToMain()");
 
+        SaveData.SaveOption();
         Time.timeScale = 1;
         SceneManager.LoadScene("StartScreen");
+        
     }
 
     public void RestartGame()
