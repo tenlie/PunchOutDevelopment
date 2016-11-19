@@ -14,7 +14,7 @@ public class SaveData : MonoBehaviour
 
     //static int[] HiScoreInitData = new int[10] { 300000, 100000, 75000, 50000, 25000, 10000, 7500, 5000, 2500, 1000 };
     //public static string[,] HiScore = new string[3,2] { {"1","0530" }, { "5", "0630" }, { "7", "0730" } };
-    public static string[,] HiScore = new string[3, 2];
+	public static string[,] HiScore = new string[3,2] { {"0","0" }, { "0", "0" }, { "0", "0" } };
 
     // Option
     public static float SoundBGMVolume = 1.0f;
@@ -220,11 +220,23 @@ public class SaveData : MonoBehaviour
 
     public static bool SaveHiScore(string punchOutCnt, string playerScore)
     {
-
         LoadHiScore();
-
-        //if rank high score... 
-
+        //i기존 기록 3등 안에 들었을 경우 넣어주기!
+        int ranking = 0 ; // 갱신된 순위 알려주는 거
+        bool flag = false;
+        for(int i = 1; i<HiScore.Length; i++)
+        {
+            if( Convert.ToInt32(HiScore[i,1])  >  Convert.ToInt32(playerScore))
+            {
+                flag = true;
+            }
+        }
+        // 기존 기록보다 좋지 않은 경우엔 아래 코드들을 실행시키지 않고 리턴 시켜준다.
+        if(flag==false)
+        {
+            return false  ;
+        }
+			
         try
         {
             Debug.Log("SaveData.SaveHiScore : Start");
@@ -235,18 +247,27 @@ public class SaveData : MonoBehaviour
             scoreList[scoreList.Length - 1, 0] = punchOutCnt;
             scoreList[scoreList.Length - 1, 1] = playerScore;
 
-            //Sort ScoreList
-            for (int i = 0; i < scoreList.Length - 1; i++)
-            {
-                for (int j = 1; j < scoreList.Length - i; j++)
-                {
-                    if (Convert.ToInt32(scoreList[j - 1, 1]) < Convert.ToInt32(scoreList[j, 1]))
-                    {
-                        swap(scoreList, j);
-                    }
-                }
-            }
-            
+			//Sort ScoreList
+			for (int i = 0; i < scoreList.Length - 1; i++)
+			{
+				for (int j = 1; j < scoreList.Length - i; j++)
+				{
+					if (Convert.ToInt32(scoreList[j - 1, 1]) < Convert.ToInt32(scoreList[j, 1]))
+					{
+						swap(scoreList, j);
+					}
+				}
+			}
+
+			// 갱신된 기록이 몇위인지 알려주기
+			for(int i = 0; i <scoreList.Length ; i++)
+			{
+				if(scoreList[i,1]==playerScore)
+				{
+					ranking = i ;
+				}
+
+			}
             // Hiscore Save
             SaveDataHeader("SDG_HiScore");
             zFoxDataPackString hiscoreData = new zFoxDataPackString();
@@ -281,6 +302,7 @@ public class SaveData : MonoBehaviour
         scorelist[i, 1] = tempScore;
     }
 
+
     public static bool LoadHiScore()
     {
         try
@@ -306,6 +328,7 @@ public class SaveData : MonoBehaviour
         }
         return false;
     }
+
 
     // === コード（オプションデータ・セーブロード） ================
     public static bool SaveOption()

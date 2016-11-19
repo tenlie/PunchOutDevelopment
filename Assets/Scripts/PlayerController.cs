@@ -135,17 +135,20 @@ public class PlayerController : MonoBehaviour
         if (col.CompareTag("Exit"))
         {
             Debug.Log(col.gameObject.name);
-			timer.finnished=true;
+			timer.finnished = true;
             GameClear();
+			return;
         }else if (col.CompareTag("Enemy"))
         {
             Debug.Log("넌 이미 뒤져있다");
             GameOver();
+			return;
         }
         else if (col.CompareTag("Print"))
         {
             Debug.Log("잠깐 쉬러왔어요");
             PrintOut();
+			return;
         }
     }
 
