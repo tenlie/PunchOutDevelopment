@@ -44,9 +44,27 @@ public class Timer : MonoBehaviour {
 			finnished = false;
 			return;
 		}
-		minute = (5+(int)t / 60).ToString ();
-		seconds = (t % 60).ToString ("f0");
-		timeText.text = minute + "시 " + seconds+"분";
+
+
+		if ((5 + (int)t / 60) < 10)
+			minute = "0" + (5 + (int)t / 60);
+		else
+			minute = (5 + (int)t / 60).ToString();
+
+		if ((t % 60) < 10)
+			seconds = "0" + (t % 60).ToString("f0");
+		else
+			seconds = (t % 60).ToString("f0");
+
+		//BackgroundImage Changes
+		if (minute+seconds == "0530") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/6pm")as Sprite;
+		else if(minute+seconds == "060") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/7pm")as Sprite;
+		else if(minute+seconds == "0630") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/8pm")as Sprite;
+		else if(minute+seconds == "070") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/9pm")as Sprite;
+
+
+
+		timeText.text = minute + ":" + seconds;
 		record = timeText.text;
 
 		rank = "";
@@ -58,10 +76,6 @@ public class Timer : MonoBehaviour {
 		else if (t > 60)
 			clearMessage = "과로사...";
 
-		//BackgroundImage Changes
-		if (minute+seconds == "530") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/6pm")as Sprite;
-		else if(minute+seconds == "60") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/7pm")as Sprite;
-		else if(minute+seconds == "630") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/8pm")as Sprite;
 	}
 
 
