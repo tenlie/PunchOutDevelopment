@@ -358,6 +358,7 @@ public class SaveData : MonoBehaviour
 
     public static bool LoadOption()
     {
+        Debug.Log("asdf");
         try
         {
             if (CheckSaveDataHeader("SDG_Option"))
