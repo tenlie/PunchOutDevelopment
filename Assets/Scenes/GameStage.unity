@@ -5997,6 +5997,9 @@ MonoBehaviour:
   Joystick: {fileID: 1045680265}
   ReadyStartText: {fileID: 991628873}
   TimerUI: {fileID: 884538346}
+  BGMSlider: {fileID: 575232474}
+  SensitivitySlider: {fileID: 78695523}
+  DifficultyDropdown: {fileID: 1820739678}
 --- !u!1 &1059477380
 GameObject:
   m_ObjectHideFlags: 0
