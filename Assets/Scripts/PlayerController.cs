@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
                 if (!LevelManager.Instance.isPaused)
                 {
                     LevelManager.Instance.PauseApplication(true);
+                    SaveData.LoadOption();
                 }
             }
         }

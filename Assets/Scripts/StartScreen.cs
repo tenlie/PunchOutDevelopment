@@ -107,7 +107,9 @@ public class StartScreen : MonoBehaviour
         isOptionUIOpen = true;
         Time.timeScale = 0;
         OptionUI_BG.SetActive(true);
+        SaveData.LoadOption();
         SetOptionData();
+
 
     }
 
