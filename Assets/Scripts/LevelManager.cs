@@ -28,6 +28,11 @@ public class LevelManager : MonoBehaviour {
 	public static float startTime;
 	public GameObject TimerUI;
 
+    public Slider BGMSlider;
+    public Slider SensitivitySlider;
+    public Dropdown DifficultyDropdown;
+
+
     void Awake()
     {
         Debug.Log("LevelManager >>> Awake()");
@@ -45,6 +50,8 @@ public class LevelManager : MonoBehaviour {
         PauseUI_BG.transform.localPosition = new Vector3(0, 0, 0);
         Joystick.transform.position = new Vector3(0, 0, 0);
 
+
+
         ReadyStartUI.SetActive(false);
         ClearUI_BG.SetActive(false);
         GameOverUI_BG.SetActive(false);
@@ -55,6 +62,8 @@ public class LevelManager : MonoBehaviour {
 
 	void Start ()
     {
+        SaveData.LoadOption();
+
         Debug.Log("LevelManager >>> Start()");
 
         //started = DateTime.UtcNow;
@@ -103,7 +112,8 @@ public class LevelManager : MonoBehaviour {
         {
             return;
         }
-
+        SaveData.LoadOption();
+        SetOptionData();
         isPaused = true;
         PauseUI_BG.SetActive(true);
         Time.timeScale = 0;
@@ -115,6 +125,7 @@ public class LevelManager : MonoBehaviour {
 
         isPaused = false;
         PauseUI_BG.SetActive(false);
+        SaveOptionData();
         Time.timeScale = 1;
     }
 
@@ -122,8 +133,7 @@ public class LevelManager : MonoBehaviour {
     public void ReturnToMain()
     {
         Debug.Log("LevelManager >>> ReturnToMain()");
-
-        SaveData.SaveOption();
+        SaveOptionData();
         Time.timeScale = 1;
         SceneManager.LoadScene("StartScreen");
         
@@ -153,5 +163,21 @@ public class LevelManager : MonoBehaviour {
     public void StartTimer()
     {
 
+    }
+
+    public void SetOptionData()
+    {
+        BGMSlider.value = SaveData.SoundBGMVolume;
+        SensitivitySlider.value = SaveData.PlayerSensitivity;
+        DifficultyDropdown.value = SaveData.Difficulty;
+    }
+
+    public void SaveOptionData()
+    {
+        SaveData.SoundBGMVolume = BGMSlider.value;
+        SaveData.PlayerSensitivity = SensitivitySlider.value;
+        SaveData.Difficulty = DifficultyDropdown.value;
+
+        SaveData.SaveOption();
     }
 }
