@@ -165,9 +165,21 @@ public class StartScreen : MonoBehaviour
                 + "분 PunchOutCnt: " + SaveData.HiScore[i, 0]);
         }
 
-        Rank1.text = SaveData.HiScore[0, 1].Substring(0, 2) + "시" + SaveData.HiScore[0, 1].Substring(2, 2) + "분    " + SaveData.HiScore[0, 0];
-        Rank2.text = SaveData.HiScore[1, 1].Substring(0, 2) + "시" + SaveData.HiScore[1, 1].Substring(2, 2) + "분    " + SaveData.HiScore[1, 0];
-        Rank3.text = SaveData.HiScore[2, 1].Substring(0, 2) + "시" + SaveData.HiScore[2, 1].Substring(2, 2) + "분    " + SaveData.HiScore[2, 0];
+		if (SaveData.HiScore [0, 1] == "0000") {
+			Rank1.text = "기록 없음"; 
+		} else {
+			Rank1.text = SaveData.HiScore[0, 1].Substring(0, 2) + "시" + SaveData.HiScore[0, 1].Substring(2, 2) + "분    " + SaveData.HiScore[0, 0];
+		}
+		if (SaveData.HiScore [1, 1] == "0000") {
+			Rank2.text = "기록 없음"; 
+		} else {
+			Rank2.text = SaveData.HiScore[1, 1].Substring(0, 2) + "시" + SaveData.HiScore[1, 1].Substring(2, 2) + "분    " + SaveData.HiScore[0, 0];
+		}
+		if (SaveData.HiScore [2, 1] == "0000") {
+			Rank3.text = "기록 없음"; 
+		} else {
+			Rank3.text = SaveData.HiScore[2, 1].Substring(0, 2) + "시" + SaveData.HiScore[2, 1].Substring(2, 2) + "분    " + SaveData.HiScore[0, 0];
+		}
     }
 
     public void Close_RankingUI()
