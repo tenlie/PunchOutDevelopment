@@ -58,11 +58,9 @@ public class Timer : MonoBehaviour {
 
 		//BackgroundImage Changes
 		if (minute+seconds == "0530") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/6pm")as Sprite;
-		else if(minute+seconds == "060") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/7pm")as Sprite;
+		else if(minute+seconds == "0600") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/7pm")as Sprite;
 		else if(minute+seconds == "0630") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/8pm")as Sprite;
-		else if(minute+seconds == "070") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/9pm")as Sprite;
-
-
+		else if(minute+seconds == "0700") spriteRenderer.sprite = Resources.Load<Sprite> ("Background/9pm")as Sprite;
 
 		timeText.text = minute + ":" + seconds;
 		record = timeText.text;
@@ -75,43 +73,36 @@ public class Timer : MonoBehaviour {
 			clearMessage = "나쁘지 않네요!";
 		else if (t > 60)
 			clearMessage = "과로사...";
-
 	}
 
 
 	public void Finnish()
 	{
-		
-		js.SetActive (false);
-		ps.enabled = false;
-		finnished = true;
-		timeText.color = Color.red;
+	//	js.SetActive (false);
+	//	ps.enabled = false;
+		finnished = false;
+		timeText.color = Color.white;
 		clearText.text = record+"!! \r\n"+clearMessage;
 
-		// 저장 시  minute + second  형태로 저장  ex) "1009"
-		if (Convert.ToInt32(minute) < 10)
-			minute = "0"+minute;
-		if (Convert.ToInt32 (seconds) < 10)
-			seconds = "0" + seconds;
-
 		Debug.Log("Clear Time!!!!!!!  :::::::::::::::::::::::::::::::::::::::::::::: "+(minute+seconds));
-		SaveData.SaveHiScore (PlayerController.punchOutCnt + "", (minute + seconds));
+		//SaveData.SaveHiScore (PlayerController.punchOutCnt + "", (minute + seconds));
 
-
+		SaveData.LoadHiScore();
 		if(SaveData.SaveHiScore(PlayerController.punchOutCnt+"",(minute+seconds)))
 		{
-			
-			for (int i = 0; i < SaveData.HiScore.Length; i++)
+			Debug.Log("SaveHiScore...");
+
+			for (int i = 0; i < SaveData.HiScore.GetLength(0); i++)
 			{
-				if (SaveData.HiScore [i,1] == (minute + seconds))
+				Debug.Log ("HiScore[i,1]" + SaveData.HiScore [i, 1]);
+				Debug.Log ("minute+seconds" + (minute + seconds));
+				if (SaveData.HiScore [i, 1] == (minute + seconds))					
 				{
-					rank = i+"";
+					Debug.Log("My Rank!!!!");
+					rank = (i+1)+"";
 					clearText.text = clearText.text +"\r\n 역대급!! "+rank+"등";
 				}
 			}
 		}
 	}
-
-
-
 }
