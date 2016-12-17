@@ -4,13 +4,14 @@ timeCreated: 1480127002
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 3
-  fontSize: 16
-  forceTextureCase: -2
+  fontSize: 50
+  forceTextureCase: -1
   characterSpacing: 1
   characterPadding: 0
   includeFontData: 1
   fontNames: []
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f2f165d4c7cc80d49871702d14dfcea9, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
