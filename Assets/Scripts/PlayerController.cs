@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
 
     public FieldOfView view;
 
-    public static int punchOutCnt { get; set; }
 
     void Awake()
     {

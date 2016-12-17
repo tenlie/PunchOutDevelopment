@@ -16,7 +16,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
 
     public virtual void OnDrag(PointerEventData ped)
     {
-        Debug.Log("Joystick >>> OnDrag()");
+    //Debug.Log("Joystick >>> OnDrag()");
 
         Vector2 pos;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(bgImg.rectTransform, ped.position, ped.pressEventCamera, out pos))

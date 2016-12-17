@@ -85,10 +85,10 @@ public class Timer : MonoBehaviour {
 		clearText.text = record+"!! \r\n"+clearMessage;
 
 		Debug.Log("Clear Time!!!!!!!  :::::::::::::::::::::::::::::::::::::::::::::: "+(minute+seconds));
-		//SaveData.SaveHiScore (PlayerController.punchOutCnt + "", (minute + seconds));
+		//SaveData.SaveHiScore (SaveData.punchOutCnt + "", (minute + seconds));
 
 		SaveData.LoadHiScore();
-		if(SaveData.SaveHiScore(PlayerController.punchOutCnt+"",(minute+seconds)))
+		if(SaveData.SaveHiScore(SaveData.punchOutCnt+"",(minute+seconds)))
 		{
 			Debug.Log("SaveHiScore...");
 
@@ -104,5 +104,8 @@ public class Timer : MonoBehaviour {
 				}
 			}
 		}
+		//도전 횟수 초기화
+		SaveData.punchOutCnt = 0;
+
 	}
 }

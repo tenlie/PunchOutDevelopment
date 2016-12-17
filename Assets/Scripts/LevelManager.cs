@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour {
     public GameObject Joystick;
 
     public Text ReadyStartText;
+	public Text NumberOfPunchOuts;
 
 	public static float startTime;
 	public GameObject TimerUI;
@@ -77,10 +78,15 @@ public class LevelManager : MonoBehaviour {
     {
         Debug.Log("LevelManager >>> ReadyStartWork()");
 
+
         zFoxFadeFilter.instance.FadeIn(Color.black, 0.1f);
         ReadyStartUI.SetActive(true);
         yield return new WaitForSeconds(2.0f);
-        ReadyStartText.text = "Start!";
+		SaveData.punchOutCnt++;
+		Debug.Log ("before Start Game cnt : "+SaveData.punchOutCnt);
+		NumberOfPunchOuts.text = SaveData.punchOutCnt+" 번째 퇴근 도전";
+        
+		ReadyStartText.text = "Start!";
 		bgm.Play ();
 		yield return new WaitForSeconds(2.0f);
        

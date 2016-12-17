@@ -28,6 +28,9 @@ public class SaveData : MonoBehaviour
     public static bool continuePlay = false;
     public static int newRecord = -1;
 
+	//클리어까지 도전 횟수 
+	public static int punchOutCnt = 0;
+
     void Awake()
     {
         Instance = this;
@@ -85,7 +88,7 @@ public class SaveData : MonoBehaviour
             SaveDataHeader("PunchOut_GamePlay");
             { // PlayerData
                 zFoxDataPackString playerData = new zFoxDataPackString();
-                playerData.Add("Player_PunchOutCnt", PlayerController.punchOutCnt);
+				playerData.Add("Player_PunchOutCnt", punchOutCnt);
                 /*
                 playerData.Add("Player_HP", PlayerController.nowHp);
                 playerData.Add("Player_Score", PlayerController.score);
@@ -150,7 +153,7 @@ public class SaveData : MonoBehaviour
                     playerData.DecodeDataPackString(playerData.PlayerPrefsGetStringUTF8("PlayerData"));
                     Debug.Log(playerData.PlayerPrefsGetStringUTF8("PlayerData"));
 
-                    PlayerController.punchOutCnt = (int)playerData.GetData("Player_PunchOutCnt");
+					punchOutCnt = (int)playerData.GetData("Player_PunchOutCnt");
                     /*
                     PlayerController.nowHp = (float)playerData.GetData("Player_HP");
                     PlayerController.score = (int)playerData.GetData("Player_Score");
@@ -246,11 +249,13 @@ public class SaveData : MonoBehaviour
         if(flag==false)
         {
 			Debug.Log ("flag : "+flag);
+
             return false  ;
         }
 
         try
         {
+
             Debug.Log("SaveData.SaveHiScore : Start");
             // Hiscore Set & Sort
             newRecord = 0;
@@ -329,6 +334,10 @@ public class SaveData : MonoBehaviour
 			}
 
 			Debug.Log("SaveData.SaveHiScore : End");
+
+
+			//Debug.Log("After Clearing stage cnt : "+SaveData.punchOutCnt);
+
             return true;
         }
         catch (System.Exception e)
