@@ -72,7 +72,7 @@ public class zFoxFadeFilter : MonoBehaviour {
 			
 		case FOXFADE_STATE.IN :
 			fadeColor.a = 1.0f - ((Time.time - startTime) / fadeTime);
-            Debug.Log("Time.time: "+Time.time + " startTime: "+startTime);
+//            Debug.Log("Time.time: "+Time.time + " startTime: "+startTime);
             if (fadeColor.a > 1.0f || fadeColor.a < 0.0f) {
 				fadeColor.a = 0.0f;
 				fadeState = FOXFADE_STATE.NON;

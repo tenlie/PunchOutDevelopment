@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour {
     public GameObject Joystick;
 
     public Text ReadyStartText;
+	public Text NumberOfPunchOuts;
 
 	public static float startTime;
 	public GameObject TimerUI;
@@ -31,6 +32,8 @@ public class LevelManager : MonoBehaviour {
     public Slider BGMSlider;
     public Slider SensitivitySlider;
     public Dropdown DifficultyDropdown;
+
+	public AudioSource bgm;
 
 
     void Awake()
@@ -62,7 +65,7 @@ public class LevelManager : MonoBehaviour {
 
 	void Start ()
     {
-        SaveData.LoadOption();
+      //  SaveData.LoadOption();
 
         Debug.Log("LevelManager >>> Start()");
 
@@ -75,16 +78,24 @@ public class LevelManager : MonoBehaviour {
     {
         Debug.Log("LevelManager >>> ReadyStartWork()");
 
+
         zFoxFadeFilter.instance.FadeIn(Color.black, 0.1f);
         ReadyStartUI.SetActive(true);
         yield return new WaitForSeconds(2.0f);
-        ReadyStartText.text = "Start!";
-        yield return new WaitForSeconds(2.0f);
-        ReadyStartUI.SetActive(false);
+		SaveData.punchOutCnt++;
+		Debug.Log ("before Start Game cnt : "+SaveData.punchOutCnt);
+		NumberOfPunchOuts.text = SaveData.punchOutCnt+" 번째 퇴근 도전";
+        
+		ReadyStartText.text = "Start!";
+		bgm.Play ();
+		yield return new WaitForSeconds(2.0f);
+       
+		ReadyStartUI.SetActive(false);
         Joystick.SetActive(true);
 
 
 		TimerUI.SetActive (true);
+
 		startTime = Time.time;
 
 
@@ -98,10 +109,9 @@ public class LevelManager : MonoBehaviour {
 
     public void PauseApplication(bool pause)
     {
-        if (pause)
-        {
-            PauseGame();
-        }
+		if (pause) {
+			PauseGame ();
+		} 
     }
 
     public void PauseGame()
@@ -112,6 +122,7 @@ public class LevelManager : MonoBehaviour {
         {
             return;
         }
+		bgm.Pause ();
         SaveData.LoadOption();
         SetOptionData();
         isPaused = true;
@@ -122,7 +133,7 @@ public class LevelManager : MonoBehaviour {
     public void ResumeGame()
     {
         Debug.Log("LevelManager >>> ResumeGame()");
-
+		bgm.Play ();
         isPaused = false;
         PauseUI_BG.SetActive(false);
         SaveOptionData();

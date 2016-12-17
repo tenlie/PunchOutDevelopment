@@ -13,7 +13,7 @@ public class ObserverAnimator : MonoBehaviour {
     }
 
     void Update () {
-        Debug.Log("Angle test : " + observer.eulerAngles.z);
+//        Debug.Log("Angle test : " + observer.eulerAngles.z);
         observerAnimator.SetFloat("ViewAngle", observer.eulerAngles.z);
     }
 }
