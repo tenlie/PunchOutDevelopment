@@ -15,7 +15,7 @@ public class Tester : MonoBehaviour
         if (routeA == 1)
         {
             iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("Path_1"),
-                                              "time", 70,
+                                              "time", 100,
                                               "easetype", iTween.EaseType.linear,
                                               //"oncomplete", "MoveToBack",
                                               "looptype", iTween.LoopType.pingPong));
@@ -23,7 +23,7 @@ public class Tester : MonoBehaviour
         if (routeA == 2)
         {
             iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPathReversed("Path_1"),
-                                              "time", 70,
+                                              "time", 100,
                                               "easetype", iTween.EaseType.linear,
                                               //"oncomplete", "MoveToBack",
                                               "looptype", iTween.LoopType.pingPong

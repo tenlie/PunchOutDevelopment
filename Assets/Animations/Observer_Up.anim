@@ -18,7 +18,7 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0.00016666666
+    - time: 0
       value: {fileID: 21300000, guid: 968565f297c06ab4abc18ad29cc42f6c, type: 3}
     - time: 0.15
       value: {fileID: 21300000, guid: f47a53c185e8bfc40a0e3f51b293f89f, type: 3}
