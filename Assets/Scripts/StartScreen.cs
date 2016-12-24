@@ -26,11 +26,17 @@ public class StartScreen : MonoBehaviour
 
     private bool isPaused;
 
+	void Awake()
+	{
+		SaveData.LoadOption ();
+		//SetOptionData ();
+		AudioListener.volume = SaveData.SoundBGMVolume;
+	}
+
     void Start()
     {
         Debug.Log("StartScreen >>> Start()");
-
-        System.GC.Collect();
+		        System.GC.Collect();
         zFoxFadeFilter.instance.FadeIn(Color.black, 1.0f);
 
         isPaused = false;

@@ -137,6 +137,8 @@ public class LevelManager : MonoBehaviour {
         isPaused = false;
         PauseUI_BG.SetActive(false);
         SaveOptionData();
+		SaveData.LoadOption ();
+		playerController.moveSpeed = SaveData.PlayerSensitivity;
         Time.timeScale = 1;
     }
 
