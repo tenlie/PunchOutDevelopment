@@ -35,7 +35,6 @@ public class LevelManager : MonoBehaviour {
 
 	public AudioSource bgm;
 
-
     void Awake()
     {
         Debug.Log("LevelManager >>> Awake()");

@@ -22,9 +22,10 @@ public class OptionsMenu2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		
         AudioListener.volume = Volume.value;
-        PlayerController.moveSpeed = Sensitivity.value;
-        LevelManager.SaveOptionData();
+		PlayerController.moveSpeed = Sensitivity.value;
+		LevelManager.SaveOptionData();
         SaveData.LoadOption();
         LevelManager.SetOptionData();
         //LevelManager.SetOptionData();

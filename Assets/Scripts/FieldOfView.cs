@@ -15,6 +15,12 @@ public class FieldOfView : MonoBehaviour {
     public LayerMask obstacleMask;
     public float deathNumber;
 
+
+	//Set difficulty
+//	public float easyDifficulty =0.5f;
+//	public float normalDifficulty = 1f;
+//	public float hardDifficulty =2f;
+
     //[HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
@@ -31,7 +37,7 @@ public class FieldOfView : MonoBehaviour {
         while (true)
         {
             yield return new WaitForSeconds(delay);
-            FindVisibleTargets();
+			FindVisibleTargets();
         }
     }
 
@@ -39,10 +45,20 @@ public class FieldOfView : MonoBehaviour {
     {
         visibleTargets.Clear();
         WarningMark.SetActive(false);
-        
-        //TODO : Length Debugging
-        Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
-        //Debug.Log("targetsInViewRadiusLength: " + targetsInViewRadius.Length);
+		        //TODO : Length Debugging
+		if (deathNumber > 0) {
+			deathNumber -= Time.deltaTime;
+		} else {
+			deathNumber = 0;
+		}
+
+
+		Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);
+
+
+
+
+		//Debug.Log("targetsInViewRadiusLength: " + targetsInViewRadius.Length);
         for (int i = 0; i < targetsInViewRadius.Length; i++)
         {
             Transform target = targetsInViewRadius[i].transform;
@@ -51,21 +67,27 @@ public class FieldOfView : MonoBehaviour {
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask))
-                {
-                    WarningMark.SetActive(true);
-                    visibleTargets.Add(target);
-                    GameOver();
-                }
-            }
+				if (!Physics2D.Raycast (transform.position, directionToTarget, distanceToTarget, obstacleMask)) {
+					WarningMark.SetActive (true);
+					visibleTargets.Add (target);
+					GameOver ();
+				} 
+			}
         }
     }
 
     void GameOver()
     {
-        deathNumber += Time.deltaTime;
-        
+		if (SaveData.Difficulty == 0) {
+			deathNumber += Time.deltaTime * 0.5f;
+		} else if (SaveData.Difficulty == 1) {
+			deathNumber += Time.deltaTime * 1;
+		} else if (SaveData.Difficulty == 2) {
+			deathNumber += Time.deltaTime * 2;
+		}
+		        
       
+
 
         if (deathNumber>=1.0){
           
